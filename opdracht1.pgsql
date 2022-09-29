@@ -1,6 +1,10 @@
 -- Which characters exist in the movie Skyfall?
 
+SELECT c.character_name FROM movies.movie_cast c, movies.movie m WHERE c.movie_id = m.movie_id AND m.title = 'Skyfall';
+
 -- Who played Kincade?
+
+
 
 -- Which movies in this database contain a character named 'Anna' (in decreasing order of popularity)?
 
