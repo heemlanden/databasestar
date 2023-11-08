@@ -42,7 +42,7 @@
 	"forwardPorts": [5000, 5432],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo apt install -y postgresql-client; for file in sample_databases/sample_db_movies/postgres/*.sql; do psql -h localhost -U postgres -f $file; done",
+	"postCreateCommand": "sudo apt update; sudo apt install -y postgresql-client; for file in sample_databases/sample_db_movies/postgres/*.sql; do psql -h localhost -U postgres -f $file; done",
 	// possibly pipx install csvkit
 	// possibly also "pip install --user -r requirements.txt",
 
